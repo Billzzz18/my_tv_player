@@ -1,11 +1,12 @@
-name: Build MyTV APK
+name: Build Nova IPTV APK
 on: [push, workflow_dispatch]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
       
       - name: Set up Java Environment
         uses: actions/setup-java@v4
@@ -18,14 +19,17 @@ jobs:
         with:
           channel: 'stable'
           
+      - name: Clean Workspace Cache
+        run: flutter clean
+          
       - name: Fetch Media Libraries
         run: flutter pub get
         
       - name: Compile Lightweight TV Production APK
-        run: flutter build apk --release
+        run: flutter build apk --release --no-pub
         
-      - name: Export MyTV Installer File
+      - name: Export Nova Installer File
         uses: actions/upload-artifact@v4
         with:
-          name: my_tv_apk
+          name: nova_iptv_apk
           path: build/app/outputs/flutter-apk/app-release.apk
