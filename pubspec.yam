@@ -9,11 +9,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^1.2.0            # Connects to your Xtream Server host
-  provider: ^6.1.1        # Manages your custom fonts, animations, and dark mode toggles
-  media_kit: ^1.1.10      # High-speed MPV video engine for TV sticks
-  media_kit_video: ^1.1.10 # Video layout window rendering wrapper
-  flutter_vlc_player: ^7.4.1 # Fallback VLC engine for older stream compatibility
+  http: ^1.2.0
+  provider: ^6.1.1
+  media_kit: ^1.1.10
+  media_kit_video: ^1.1.10
+  flutter_vlc_player: ^7.4.1
   shared_preferences: ^2.2.3
 
 dev_dependencies:
