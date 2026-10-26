@@ -19,14 +19,16 @@ jobs:
         with:
           channel: 'stable'
           
-      - name: Clean Workspace Cache
-        run: flutter clean
+      - name: Force Clean Cache Sync
+        run: |
+          flutter clean
+          flutter pub cache clean --force
           
       - name: Fetch Media Libraries
         run: flutter pub get
         
       - name: Compile Lightweight TV Production APK
-        run: flutter build apk --release --no-pub
+        run: flutter build apk --release
         
       - name: Export Nova Installer File
         uses: actions/upload-artifact@v4
