@@ -1,0 +1,25 @@
+name: xtream_player
+description: "A premium Apple TV style IPTV Player built with AI."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.0            # Connects to your Xtream Server host
+  provider: ^6.1.1        # Manages your custom fonts, animations, and dark mode toggles
+  media_kit: ^1.1.10      # High-speed MPV video engine for TV sticks
+  media_kit_video: ^1.1.10 # Video layout window rendering wrapper
+  flutter_vlc_player: ^7.4.1 # Fallback VLC engine for older stream compatibility
+  shared_preferences: ^2.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
