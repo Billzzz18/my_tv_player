@@ -10,7 +10,8 @@ import 'package:media_kit/media_kit.dart';
 import 'package:media_kit_video/media_kit_video.dart';
 import 'package:provider/provider.dart';
 
-import 'settings_provider.dart';
+import 'package:nova/settings_provider.dart';
+
 
 // =============================================================================
 //  CONSTANTS
