@@ -1,4 +1,4 @@
-name: xtream_player
+name: nova
 description: "A premium Apple TV style IPTV Player built with AI."
 publish_to: 'none'
 version: 1.0.0+1
